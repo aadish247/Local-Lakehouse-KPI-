@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Lakehouse KPI Project Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Lakehouse KPI Project Overview</h1>
+
+    <h2>Introduction</h2>
+    <p>This project is designed to create a local lakehouse for managing and analyzing key performance indicators (KPIs). A lakehouse combines the best features of data lakes and data warehouses, enabling efficient storage, processing, and analysis of structured and unstructured data.</p>
+
+    <h2>Key Components</h2>
+    <ul>
+        <li><strong>DuckDB:</strong> A lightweight database used for storing and querying data locally.</li>
+        <li><strong>dbt (Data Build Tool):</strong> A tool for transforming data in DuckDB using SQL-based models.</li>
+        <li><strong>Power BI:</strong> A visualization tool used to create charts and dashboards from the processed data.</li>
+        <li><strong>Python:</strong> Used for scripting and generating charts programmatically.</li>
+    </ul>
+
+    <h2>Project Workflow</h2>
+    <ol>
+        <li><strong>Data Preparation:</strong> Raw data is stored in DuckDB.</li>
+        <li><strong>Data Transformation:</strong> dbt is used to create models that transform raw data into meaningful tables (e.g., fact_sales, dim_customer, dim_product).</li>
+        <li><strong>Data Export:</strong> Transformed tables are exported from DuckDB to Parquet and CSV files.</li>
+        <li><strong>Visualization:</strong> Power BI is used to load the exported files and create interactive dashboards.</li>
+        <li><strong>Chart Generation:</strong> Python scripts are used to generate charts as JPG files for documentation.</li>
+    </ol>
+
+    <h2>Definitions</h2>
+    <ul>
+        <li><strong>Lakehouse:</strong> A unified platform that combines the features of data lakes and data warehouses.</li>
+        <li><strong>DuckDB:</strong> A fast, in-process SQL OLAP database system.</li>
+        <li><strong>dbt:</strong> A tool for data transformation and modeling using SQL.</li>
+        <li><strong>Power BI:</strong> A business analytics tool for creating visualizations and dashboards.</li>
+        <li><strong>Fact Table:</strong> A table that contains measurable, quantitative data (e.g., sales).</li>
+        <li><strong>Dimension Table:</strong> A table that contains descriptive attributes related to fact data (e.g., customers, products).</li>
+    </ul>
+
+    <h2>Pipeline Overview</h2>
+    <p>The pipeline consists of the following steps:</p>
+    <ol>
+        <li><strong>Data Ingestion:</strong> Raw data is loaded into DuckDB.</li>
+        <li><strong>Data Modeling:</strong> dbt transforms the raw data into structured tables.</li>
+        <li><strong>Data Export:</strong> Tables are exported to Parquet and CSV formats for analysis.</li>
+        <li><strong>Visualization:</strong> Power BI creates dashboards from the exported data.</li>
+        <li><strong>Documentation:</strong> Python generates charts for reporting purposes.</li>
+    </ol>
+
+    <h2>How It Works</h2>
+    <p>Here’s a step-by-step explanation:</p>
+    <ol>
+        <li>DuckDB stores raw data locally, making it easy to query and process.</li>
+        <li>dbt uses SQL scripts to transform the raw data into structured tables.</li>
+        <li>Exported files (Parquet and CSV) are loaded into Power BI for visualization.</li>
+        <li>Python scripts generate charts to document the data insights.</li>
+        <li>All components work together to create a seamless data analysis workflow.</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>This project demonstrates how to build a local lakehouse for KPI analysis using DuckDB, dbt, Power BI, and Python. It provides a scalable and efficient solution for managing and visualizing data.</p>
+</body>
+</html>
