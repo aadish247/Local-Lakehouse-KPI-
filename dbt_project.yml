@@ -1,0 +1,29 @@
+# Core metadata
+name: 'retail_duck'
+version: '1.0.0'
+config-version: 2            # Important: Enables current config syntax
+profile: 'retail_duck'
+
+# Define paths for various resource types
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Artifacts cleanup
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations (applied hierarchically)
+models:
+  retail_duck:
+    +materialized: view       # default materialization for all models
+
+    staging:                  # config overrides for staging folder
+      +materialized: view
+
+    marts:                    # config overrides for marts folder
+      +materialized: table
