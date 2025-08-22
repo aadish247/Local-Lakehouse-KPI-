@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Lakehouse KPI Project Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box {
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .arrow {
+            margin: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Local Lakehouse KPI Project Flowchart</h1>
+
+    <h2>Introduction</h2>
+    <p>This flowchart explains the Local Lakehouse KPI project step-by-step, including definitions and detailed explanations of each component.</p>
+
+    <div class="flowchart">
+        <div class="box">
+            <h3>Raw Data</h3>
+            <p>Data is ingested into DuckDB, a lightweight database for local storage and querying.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>DuckDB</h3>
+            <p>A fast, in-process SQL OLAP database system used for storing and querying data locally.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>dbt (Data Build Tool)</h3>
+            <p>Transforms raw data into structured tables using SQL-based models.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>Transformed Tables</h3>
+            <p>Fact and dimension tables (e.g., fact_sales, dim_customer, dim_product) are created.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>Exported Files</h3>
+            <p>Tables are exported to Parquet and CSV formats for analysis.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>Power BI</h3>
+            <p>Visualizes the exported data by creating interactive dashboards and charts.</p>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="box">
+            <h3>Python Charts</h3>
+            <p>Generates charts as JPG files for documentation and reporting.</p>
+        </div>
+    </div>
+
+    <h2>Definitions</h2>
+    <ul>
+        <li><strong>Lakehouse:</strong> A unified platform that combines the features of data lakes and data warehouses.</li>
+        <li><strong>DuckDB:</strong> A fast, in-process SQL OLAP database system.</li>
+        <li><strong>dbt:</strong> A tool for data transformation and modeling using SQL.</li>
+        <li><strong>Power BI:</strong> A business analytics tool for creating visualizations and dashboards.</li>
+        <li><strong>Fact Table:</strong> A table that contains measurable, quantitative data (e.g., sales).</li>
+        <li><strong>Dimension Table:</strong> A table that contains descriptive attributes related to fact data (e.g., customers, products).</li>
+    </ul>
+
+    <h2>Pipeline Overview</h2>
+    <p>The pipeline consists of the following steps:</p>
+    <ol>
+        <li><strong>Data Ingestion:</strong> Raw data is loaded into DuckDB.</li>
+        <li><strong>Data Modeling:</strong> dbt transforms the raw data into structured tables.</li>
+        <li><strong>Data Export:</strong> Tables are exported to Parquet and CSV formats for analysis.</li>
+        <li><strong>Visualization:</strong> Power BI creates dashboards from the exported data.</li>
+        <li><strong>Documentation:</strong> Python generates charts for reporting purposes.</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>This flowchart provides a clear and detailed explanation of the Local Lakehouse KPI project, making it easy to understand for beginners.</p>
+</body>
+</html>
